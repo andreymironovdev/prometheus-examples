@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: prometheus-demo
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    distribution:
+      ph:
+        http.server.requests: false
+      slo:
+        http.server.requests: 1s,2s,5s,10s,15s,20s,30s
